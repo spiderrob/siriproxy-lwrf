@@ -87,7 +87,7 @@ class SiriProxy::Plugin::Lwrf < SiriProxy::Plugin
         if room 
           device = room["device"].detect {|d| d.downcase == deviceName} if room["device"]
           if device
-            say "Ok Turning #{action} the #{device} in the #{room["name"]}."
+            say "Ok Rob, Turning #{action} the #{device} in the #{room["name"]}."
             lwrf.send "#{room["name"]}", "#{device}", "#{action}", @debug rescue nil
             @debug and (puts "[Info - Lwrf] send_lwrf_command: Command sent to LightWaveRF Gem" )
           else
