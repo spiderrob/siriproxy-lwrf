@@ -38,7 +38,7 @@ class SiriProxy::Plugin::Lwrf < SiriProxy::Plugin
 
   # Command to test plugin
   listen_for /test lightwave/i do
-    say "LightWave is in my control using the following config file: #{LightWaveRF.new.get_config_file rescue nil}", spoken: "LightWave is in my control!"
+    say "LightWave is now in my control using the following config file: #{LightWaveRF.new.get_config_file rescue nil}", spoken: "LightWave is in my control!"
     request_completed
   end
 
